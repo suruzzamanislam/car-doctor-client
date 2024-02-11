@@ -1,0 +1,6 @@
+.active {
+  color: blue;
+}
+ul li a:hover {
+  color: blue;
+}

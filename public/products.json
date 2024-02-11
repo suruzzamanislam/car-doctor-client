@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Engine",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe7wKYomPejEmle-a059njpMAyp7y4nc-SbA&usqp=CAU",
+    "price": 3000
+  },
+  {
+    "name": "Transmission",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhkiykdAqVi8HREq3Wr_nWU55Ppkih928m4w&usqp=CAU",
+    "price": 2000
+  },
+  {
+    "name": "Suspension",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJBzOQsBcXclkKfPBD0PKaRZ61HMfKrHRjIQ&usqp=CAU",
+    "price": 1500
+  },
+  {
+    "name": "Brakes",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQed0xt2WVd0ZXEodRki7yKIVu1s08k2PB5qw&usqp=CAU",
+    "price": 1200
+  },
+  {
+    "name": "Steering",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbtIrYPKvo9TAMaRCj1dyTGGziI7aBu99I4A&usqp=CAU",
+    "price": 1000
+  },
+  {
+    "name": "Electrical System",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJaYZEK3N34u4TEeTyVE0AEi2suDA4YJugA&usqp=CAU",
+    "price": 800
+  }
+]
