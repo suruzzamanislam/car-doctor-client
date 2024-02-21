@@ -12,7 +12,7 @@ import Testimonial from '../Testimonial/Testimonial';
 const Home = () => {
   return (
     <div>
-      <div className="max-w-7xl mx-auto px-3 lg:px-0">
+      <div>
         <Menu></Menu>
         <Banner></Banner>
         <About></About>

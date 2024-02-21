@@ -1,12 +1,17 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { authContext } from '../../../provider/AuthProvider';
 const ProductCard = ({ product }) => {
+  const { mode } = useContext(authContext);
   const { name, img, price } = product;
   return (
     <div className="border shadow-xl text-center rounded-lg p-5">
       <div>
         <img src={img} className="rounded-lg h-[250px] w-full border" alt="" />
       </div>
-      <p className="text-2xl font-bold py-5">{name}</p>
+      <p className={`text-2xl font-bold py-5 ${mode && 'text-mode-text'}`}>
+        {name}
+      </p>
       <div className="rating rating-sm">
         <input
           type="radio"

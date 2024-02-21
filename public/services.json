@@ -1,6 +1,5 @@
 [
   {
-    "_id": "635a0c0b64a6d231228942ae",
     "service_id": "04",
     "title": "Engine Oil Change",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYkL_cb1YB-J8mYXL02bQvZMVK2SqDnp58jA&usqp=CAU",
@@ -26,7 +25,6 @@
     ]
   },
   {
-    "_id": "635a0c0b64a6d231228942af",
     "service_id": "05",
     "title": "Battery Charge",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMIoURumPWUnMVf-UFfHodt1zp4w-JKDxoCA&usqp=CAU",
@@ -52,7 +50,6 @@
     ]
   },
   {
-    "_id": "635b591a1dafe382a9da8c96",
     "service_id": "01",
     "title": "Full car Repair",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCtoFaKjOvT8E6YtmE2sY_z7GMI-vp7_o4mA&usqp=CAU",
@@ -78,7 +75,6 @@
     ]
   },
   {
-    "_id": "635b5afc1dafe382a9da8c98",
     "service_id": "02",
     "title": "Engine Repair",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3qb9AcsEmJKyiTKOtODK65_ZOcjbKUzzeUA&usqp=CAU",
@@ -104,7 +100,6 @@
     ]
   },
   {
-    "_id": "635b5b691dafe382a9da8c99",
     "service_id": "03",
     "title": "Automatic Services",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOdhIVNYx7MYp882IQrz2ISfuR9u1oduKoLQ&usqp=CAU",
@@ -130,7 +125,6 @@
     ]
   },
   {
-    "_id": "635b5ba51dafe382a9da8c9a",
     "service_id": "06",
     "title": "Electrical System",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOgiM1fQs0-zJGtxxnkF6SvtQmAB7WqHcFcg&usqp=CAU",

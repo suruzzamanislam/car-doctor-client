@@ -1,7 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import TeamCard from './TeamCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/bundle';
+import { Autoplay } from 'swiper/modules';
+import './swiper.css';
+import { authContext } from '../../../provider/AuthProvider';
+
 const Teams = () => {
   const [engineer, setEngineer] = useState([]);
+  const { mode } = useContext(authContext);
   useEffect(() => {
     fetch('team.json')
       .then(res => res.json())
@@ -9,8 +16,8 @@ const Teams = () => {
   }, []);
 
   return (
-    <div>
-      <div className="text-center space-y-3">
+    <div className={`px-3 md:px-20 ${mode && 'bg-mode-dark'}`}>
+      <div className={`text-center space-y-3 ${mode && 'text-mode-text'}`}>
         <p className="text-xl font-semibold text-[#FF3811]">Team</p>
         <h1 className="text-3xl font-bold">Meet Our Team</h1>
         <p className="max-w-[717px] mx-auto font-medium">
@@ -19,15 +26,32 @@ const Teams = () => {
           believable.{' '}
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-        {engineer.slice(0, 3).map((enginer, idx) => (
-          <TeamCard key={idx} enginer={enginer}></TeamCard>
-        ))}
-      </div>
-      <div className="mt-10 text-center">
-        <button className="font-medium rounded-md px-5 py-2 md:text-xl border hover:bg-[#FF3811] transition-all text-[#FF3811] border-[#FF3811] hover:text-white">
-          More Engineers
-        </button>
+      <div className="mt-10">
+        <Swiper
+          slidesPerView="1"
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          modules={[Autoplay]}
+          spaceBetween={30}
+          loop={true}
+          autoplay={{
+            delay: 1,
+            disableOnInteraction: false,
+          }}
+          speed="5000"
+        >
+          {engineer.map((enginer, idx) => (
+            <SwiperSlide key={idx}>
+              <TeamCard enginer={enginer}></TeamCard>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

@@ -6,6 +6,9 @@ import Signup from '../Pages/Shared/Signup/Signup';
 import About from '../Pages/About/About';
 import Services from '../Pages/Services/Services';
 import Contact from '../Pages/Contact/Contact';
+import ServiceDetails from '../Pages/ServiceDetails/ServiceDetails';
+import Booking from '../Pages/Booking/Booking';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +38,24 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>,
+      },
+      {
+        path: '/details/:id',
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
+      },
+      {
+        path: '/booking',
+        element: (
+          <PrivateRoute>
+            <Booking></Booking>
+          </PrivateRoute>
+        ),
       },
     ],
   },

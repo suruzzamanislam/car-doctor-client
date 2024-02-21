@@ -1,6 +1,6 @@
 .active {
-  color: blue;
+  color: rgb(147, 147, 176);
 }
 ul li a:hover {
-  color: blue;
+  color: rgb(147, 147, 176);
 }

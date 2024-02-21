@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut,
 } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
 
@@ -11,6 +12,12 @@ export const authContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [mode, setMode] = useState(false);
+
+  const handleMode = () => {
+    console.log('fire handle mood');
+    setMode(!mode);
+  };
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -22,10 +29,14 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  const logOut = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
   useEffect(() => {
     const unsubcrive = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
-      console.log('currnet user', currentUser);
       setLoading(false);
     });
 
@@ -38,6 +49,10 @@ const AuthProvider = ({ children }) => {
     user,
     createUser,
     loginUser,
+    logOut,
+    loading,
+    mode,
+    handleMode,
   };
 
   return (
