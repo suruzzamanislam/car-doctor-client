@@ -28,7 +28,7 @@ const Teams = () => {
       </div>
       <div className="mt-10">
         <Swiper
-          slidesPerView="1"
+          slidesPerView={1}
           breakpoints={{
             768: {
               slidesPerView: 2,

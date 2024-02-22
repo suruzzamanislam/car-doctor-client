@@ -190,7 +190,7 @@ const ServiceDetails = () => {
                   </button>
                 </div>
               </div>
-              <div className="bg-[#151515] space-y-6 px-5 py-6 mt-3 rounded-sm text-white text-center">
+              <div className="bg-[#151515] space-y-6 px-5 py-10 mt-6 rounded-sm text-white text-center">
                 <div className="flex justify-center">
                   <img src={logo} alt="" />
                 </div>
@@ -209,7 +209,7 @@ const ServiceDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-[#151515] text-white py-1 mt-3 px-3 rounded-md">
+              <div className="bg-[#151515] text-white py-3 mt-3 px-3 rounded-md">
                 <p className="text-xl font-bold mt-5">Service: {title}</p>
                 <p className="text-2xl font-bold mb-5">Price: ${price}</p>
               </div>

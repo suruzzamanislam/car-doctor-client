@@ -5,12 +5,16 @@ import Menu from '../Shared/Navbar/Menu';
 import { authContext } from '../../provider/AuthProvider';
 
 const Services = () => {
+  const [loading, setLoading] = useState(true);
   const [services, setServices] = useState([]);
   const { mode } = useContext(authContext);
   useEffect(() => {
     fetch('http://localhost:5000/services')
       .then(res => res.json())
-      .then(data => setServices(data));
+      .then(data => {
+        setLoading(false);
+        setServices(data);
+      });
   }, []);
   return (
     <>
@@ -26,6 +30,11 @@ const Services = () => {
               believable.{' '}
             </p>
           </div>
+          {loading && (
+            <div className="text-center mt-5">
+              <span className="loading loading-dots loading-lg"></span>
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 justify-between mt-8 md:mt-16">
             {services.map(service => (
               <ServiceCard key={service._id} service={service}></ServiceCard>

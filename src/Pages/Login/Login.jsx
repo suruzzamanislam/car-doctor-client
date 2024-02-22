@@ -49,7 +49,7 @@ const Login = () => {
       <Menu></Menu>
       <div className={`px-3 md:px-20 ${mode && 'bg-mode-dark text-mode-text'}`}>
         <ReactNotifications />
-        <div className="flex flex-col md:flex-row gap-10 py-6">
+        <div className="flex flex-col md:flex-row gap-10 py-12">
           <div className="mt-6 md:w-1/2">
             <img src={img} alt="" />
           </div>
