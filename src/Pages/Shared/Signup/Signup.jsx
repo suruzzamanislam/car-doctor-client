@@ -43,6 +43,9 @@ const Signup = () => {
         setError(error.message);
       });
   };
+  const handleShowPass = () => {
+    setShowPass(!showPass);
+  };
   return (
     <>
       <Menu></Menu>
@@ -93,7 +96,7 @@ const Signup = () => {
               />
               <button
                 className="absolute right-3 bottom-4"
-                onClick={() => setShowPass(!showPass)}
+                onClick={handleShowPass}
               >
                 {' '}
                 {showPass ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}

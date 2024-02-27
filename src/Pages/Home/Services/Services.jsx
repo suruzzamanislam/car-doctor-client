@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import ServiceCard from './ServiceCard';
 import { authContext } from '../../../provider/AuthProvider';
+import { NavLink } from 'react-router-dom';
 
 const Services = () => {
   const { mode } = useContext(authContext);
@@ -43,15 +44,18 @@ const Services = () => {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <button
-            className={`block md:inline bg-[#FF3811] px-5 py-2 md:text-xl md:font-medium rounded-md hover:bg-transparent hover:border cursor-pointer transition-all z-50 ${
-              mode
-                ? 'text-gray-400 border border-mode-light hover:text-white bg-mode-dark'
-                : 'text-mode-light'
-            }`}
-          >
-            More Services
-          </button>
+          <NavLink to="/services">
+            <button
+              className={`font-medium rounded-md px-5 py-2 md:text-xl border hover:bg-[#FF3811] transition-all text-[#FF3811] border-[#FF3811] hover:text-white
+                ${
+                  mode &&
+                  'text-gray-400 hover:text-white hover:bg-mode-dark border-white'
+                }
+                `}
+            >
+              More Services
+            </button>
+          </NavLink>
         </div>
       </div>
     </div>
